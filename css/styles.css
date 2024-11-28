@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    background: black;
+    position: relative;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: black;
+    left: 0;
+  }
+  
+  .hamburger::before {
+    top: -8px;
+  }
+  
+  .hamburger::after {
+    bottom: -8px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 200px;
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .intro {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .intro-content {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .image-small {
+    width: 150px;
+    height: 100px;
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  .text p {
+    margin: 10px 0;
+  }
+  
+  .gallery {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .image-large {
+    width: 100%;
+    height: 300px;
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  .details {
+    margin: 20px 0;
+  }
+  
+  .details-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-medium {
+    width: 100%;
+    height: 200px;
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  footer {
+    text-align: center;
+    background: #ddd;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
