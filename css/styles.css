@@ -73,30 +73,26 @@ nav a {
   background: url('/assets/Images/Scene3-Camera.png') no-repeat center center;
   background-size: cover;
   display: flex;
-  justify-content: flex-end; /* Alinha todo o conteúdo ao lado direito */
+  justify-content: flex-end; /* Alinha o conteúdo ao lado direito */
   align-items: center; /* Centraliza verticalmente */
   position: relative;
+  padding-right: 40px; /* Ajusta o espaçamento da borda direita */
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column; /* Garante que os itens fiquem empilhados */
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
-  align-items: flex-end; /* Alinha o texto à direita */
-  padding-right: 40px; /* Adiciona distância da margem direita */
   text-align: right; /* Garante que o texto fique alinhado à direita */
-  position: relative;
+  max-width: 50%; /* Limita a largura máxima do texto para mantê-lo ajustado */
 }
 
 .hero-title {
-  font-size: 8vw; /* Tamanho dinâmico */
+  font-size: 8vw; /* Tamanho dinâmico do texto */
   font-weight: bold;
   color: white;
   line-height: 1.2;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   margin: 0; /* Remove margens externas */
-  padding-right: 50px;
 }
+
 
 /* Main Content */
 main {
