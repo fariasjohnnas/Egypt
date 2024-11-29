@@ -1,177 +1,345 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  header {
-    background: #f1f1f1;
-    padding: 20px;
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .hamburger {
-    width: 30px;
-    height: 3px;
-    background: black;
-    position: relative;
-  }
-  
-  .hamburger::after,
-  .hamburger::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: black;
-    left: 0;
-  }
-  
-  .hamburger::before {
-    top: -8px;
-  }
-  
-  .hamburger::after {
-    bottom: -8px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .hero {
-    width: 100%;
-    height: 200px;
-    background: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .intro {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .intro-content {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  
-  .image-small {
-    width: 150px;
-    height: 100px;
-    background: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 14px;
-    color: black;
-    border: 1px solid #ccc;
-  }
-  
-  .text p {
-    margin: 10px 0;
-  }
-  
-  .gallery {
-    position: relative;
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .image-large {
-    width: 100%;
-    height: 300px;
-    background: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    color: black;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: 1px solid black;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  button.prev {
-    left: 10px;
-  }
-  
-  button.next {
-    right: 10px;
-  }
-  
-  .details {
-    margin: 20px 0;
-  }
-  
-  .details-content {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .column {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .image-medium {
-    width: 100%;
-    height: 200px;
-    background: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    color: black;
-    border: 1px solid #ccc;
-  }
-  
-  footer {
-    text-align: center;
-    background: #ddd;
-    padding: 10px 0;
-    margin-top: 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Cabeçalho fixo */
+header {
+  background: #f1f1f1;
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Garante que fique acima do conteúdo */
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background: black;
+  position: relative;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: black;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 0px;
+  width: 100%;
+  height: 100vh;
+  background: url('/assets/Images/Scene3-Camera.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end; /* Alinha todo o conteúdo ao lado direito */
+  align-items: center; /* Centraliza verticalmente */
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column; /* Garante que os itens fiquem empilhados */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: flex-end; /* Alinha o texto à direita */
+  padding-right: 40px; /* Adiciona distância da margem direita */
+  text-align: right; /* Garante que o texto fique alinhado à direita */
+  position: relative;
+}
+
+.hero-title {
+  font-size: 8vw; /* Tamanho dinâmico */
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  margin: 0; /* Remove margens externas */
+  padding-right: 50px;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  margin-top: 50px;
+  background: white; /* Fundo branco para o conteúdo principal */
+}
+
+h1 {
+  color: #793f04;
+  font-size: 2.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 80px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 40px;
+}
+
+ul {
+  margin-left: 80px; /* Adiciona um recuo maior na lista */
+}
+
+li {
+  padding-left: 10px; /* Adiciona espaçamento dentro de cada item da lista */
+}
+
+.text-section {
+  width: 100%; /* Ocupa toda a largura do container pai */
+  padding: 30px; /* Espaçamento interno de 30px em todos os lados */
+  margin: 0; /* Remove margens externas */
+}
+
+.text-section p {
+  text-align: justify; /* Justifica o texto */
+  font-size: 1rem; /* Define o tamanho do texto */
+  line-height: 1.6; /* Aumenta a legibilidade */
+  color: #333; /* Define a cor do texto */
+  margin: 0; /* Remove margens padrão do parágrafo */
+}
+
+
+
+.intro {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.intro-content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.image-small {
+  width: 300px; /* Largura fixa do container */
+  height: 200px; /* Altura fixa do container */
+  background: none; /* Remove o fundo cinza */
+  display: flex; /* Mantém o alinhamento centralizado */
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  text-align: center;
+  border: 1px solid #ccc; /* Borda ao redor do container */
+  overflow: hidden; /* Corta a imagem se ultrapassar o container */
+  margin: 10px;
+}
+
+
+.image-small img {
+  width: 100%; /* A imagem ocupa a largura total do container */
+  height: 100%; /* A imagem ocupa a altura total do container */
+  object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+  display: block; /* Garante que a imagem não seja inline */
+}
+
+.object-small {
+  width: 300px; /* Largura fixa do container */
+  height: 200px; /* Altura fixa do container */
+  background: none; /* Remove o fundo cinza */
+  display: flex; /* Mantém o alinhamento centralizado */
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  text-align: center;
+  border: 1px solid #ccc; /* Borda ao redor do container */
+  overflow: hidden; /* Corta a imagem se ultrapassar o container */
+  margin: 10px;
+  object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+}
+
+.text p {
+  margin: 10px 0;
+}
+
+.gallery {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Estilos para o carrossel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Mantém a largura fixa */
+  height: 360px; /* Aumenta a altura em 20% */
+  overflow: hidden; /* Esconde imagens fora do container */
+  margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.carousel-images {
+  display: flex; /* Organiza as imagens em linha */
+  transition: transform 0.5s ease-in-out; /* Anima a transição */
+}
+
+.carousel-images img {
+  width: 100%; /* Preenche a largura do container */
+  height: 100%; /* Adapta à nova altura do container */
+  object-fit: cover; /* Garante que as imagens preencham o espaço */
+  flex-shrink: 0; /* Impede que as imagens diminuam */
+}
+
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10; /* Garante que os botões fiquem acima das imagens */
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background: rgba(0, 0, 0, 0.8); /* Escurece o botão ao passar o mouse */
+}
+
+.image-large {
+  width: 100%;
+  height: 300px;
+  background: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.details {
+  margin: 20px 0;
+}
+
+.details-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-medium {
+  width: 100%;
+  height: 200px;
+  background: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automaticamente as colunas */
+  gap: 20px; /* Espaçamento entre itens */
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 1200px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o grid */
+  padding: 20px; /* Espaçamento interno */
+  box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column; /* Alinha imagem e texto verticalmente */
+  align-items: center; /* Centraliza o conteúdo */
+  background-color: #f9f9f9; /* Fundo claro */
+  padding: 20px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda ao redor */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.grid-image {
+  width: 100%; /* A imagem ocupa toda a largura do container */
+  height: auto; /* Altura ajustada proporcionalmente */
+  max-width: 250px; /* Define um limite para imagens grandes */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+  border-radius: 5px; /* Bordas arredondadas na imagem */
+}
+
+.grid-text {
+  margin-top: 15px; /* Espaço acima do texto */
+  font-size: 1rem; /* Tamanho do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  text-align: center; /* Centraliza o texto */
+}
+
+
+
+footer {
+  text-align: center;
+  background: #ddd;
+  padding: 10px 0;
+  margin-top: 20px;
+}
