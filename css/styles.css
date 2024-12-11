@@ -147,7 +147,7 @@ li {
 
 .text-section {
   width: 100%; /* Ocupa toda a largura do container pai */
-  padding: 30px; /* Espaçamento interno de 30px em todos os lados */
+  padding: 20%; /* Espaçamento interno de 30px em todos os lados */
   margin: 0; /* Remove margens externas */
 }
 

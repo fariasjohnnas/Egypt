@@ -30,4 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageWidth = carouselImages.parentElement.clientWidth; // Usa a largura do container
     carouselImages.style.transform = `translateX(-${currentIndex * imageWidth}px)`; // Apenas desloca horizontalmente
   }
+  document.getElementById("horus-face").addEventListener('click', () => {
+    const horusContent = document.getElementById('horus-content');
+    horusContent.innerHTML = 'new content';
+  });
 });
+
+
