@@ -149,8 +149,8 @@ li {
   width: 100%; /* Ocupa toda a largura do container pai */
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 20%; /* Espaçamento interno de 30px em todos os lados */
-  padding-right: 20%;
+  padding-left: 15%; /* Espaçamento interno de 30px em todos os lados */
+  padding-right: 15%;
   margin: 0; /* Remove margens externas */
 }
 
